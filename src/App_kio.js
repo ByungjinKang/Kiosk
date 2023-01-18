@@ -7,6 +7,7 @@ import Content from './Content_list'
 import { Route, Routes } from "react-router-dom"
 import Navbox from './Navbox'
 import Create_list from './Create_list'
+import Main from './Main'
 
 export default class App_kio extends Component {
  constructor(props) {
@@ -93,9 +94,13 @@ export default class App_kio extends Component {
 
     return (
         <>
-        
-        <Navbox />
         <Routes>
+        <Route path = '/' element= {<Main>
+        </Main>} />
+
+        <Route path = '/navi' element= {<Navbox>
+          </Navbox>} />
+
           <Route path='/fir' element={<BevList1         
           onChangePage={function(id) {
             this.setState({
