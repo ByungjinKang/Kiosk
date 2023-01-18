@@ -18,7 +18,7 @@ export default class BevList1 extends Component {
               }.bind(this)
             }
             data-id={data[index].id}
-          >{data[index].title}</a>
+          >{data[i].img}{data[i].title}</a>
         </li>);
     });
     return (
