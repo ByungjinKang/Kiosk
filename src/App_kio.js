@@ -101,7 +101,7 @@ export default class App_kio extends Component {
         <Route path = '/navi' element= {<Navbox>
           </Navbox>} />
 
-          <Route path='/fir' element={<BevList1         
+          <Route path='/fir' element={[<Navbox/>, <BevList1         
           onChangePage={function(id) {
             this.setState({
               mode:'first',
@@ -110,8 +110,8 @@ export default class App_kio extends Component {
             });
           }.bind(this) }
           data={this.state.content1}>
-          </BevList1>} />
-              <Route path='/sec' element={<BevList2
+          </BevList1>]} />
+              <Route path='/sec' element={[<Navbox/>, <BevList2
             onChangePage={function(id) {
             this.setState({
               mode:'second',
@@ -120,8 +120,8 @@ export default class App_kio extends Component {
             });
           }.bind(this) }
           data={this.state.content2}>
-          </BevList2>} />
-              <Route path='/thi' element={<BevList3
+          </BevList2>]} />
+              <Route path='/thi' element={[<Navbox/>, <BevList3
             onChangePage={function(id) {
             this.setState({
               mode:'third',
@@ -130,14 +130,13 @@ export default class App_kio extends Component {
             });
           }.bind(this)}
           data={this.state.content3}>
-          </BevList3>} />
+          </BevList3>]} />
     </Routes>
         <div className="App">
         {this.state.mode2 == 'on' ?
         <Content title={_title}  desc ={_desc}>
         </Content> : null
         }
-        {_article}
         
      </div>
     </>       
