@@ -1,0 +1,98 @@
+/*.App {
+  text-align: center;
+  color: blue;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #2e7f96;
+  text-align: center;
+  margin: auto;
+  width: 20em; height: 8em;
+}
+
+.mathCal {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.mathNum{
+  color: white;
+}
+
+.bac{
+  background-color: red;
+}
+*/
+div{
+  border: 1px solid black;
+}
+
+.qrImg{
+  border: 1px solid black;
+  width: 250px;
+  height: 150px;
+}
+
+Table{
+  margin: auto;
+}
+
+.leftTb{
+  margin: 0px;
+}
+
+.rightTb{
+  text-align: right;
+}
+
+.login{
+  width: 5.5em;
+  float: right;
+}
+
+.leftText{
+  text-align: left;
+}
+
+.rightText{
+  text-align: right;
+}
+
+.inputText{
+  width: 200px;
+}
