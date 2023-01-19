@@ -5,11 +5,12 @@ export default class BevList1 extends Component {
     var lists = [];
     var data = this.props.data;
 
+
     data.forEach((item, index) => {
       lists.push(
         <li key={data[index].id}>
           <a 
-            href={"/content/"+data[index].id}
+            href={data[index].id}
             onClick= {
               function (e) {
                 e.preventDefault();
@@ -22,7 +23,7 @@ export default class BevList1 extends Component {
     });
     return (
       <nav>
-         <hr></hr>
+        <hr></hr>
         <ul>
             {lists[0]}{lists[1]}{lists[2]}
             <br>

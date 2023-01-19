@@ -3,7 +3,6 @@ import { Route, Routes, Link } from "react-router-dom"
 
 export default class Content_list extends Component {
   render() {
-    //console.log ("rendering");
     return (
       <article>
         <Link to="./pay">
