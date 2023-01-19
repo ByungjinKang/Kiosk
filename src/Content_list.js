@@ -1,18 +1,14 @@
 import React, { Component } from "react";
+import { Route, Routes, Link } from "react-router-dom"
 
 export default class Content_list extends Component {
   render() {
+    //console.log ("rendering");
     return (
       <article>
-        <h3>
-          {this.props.title}
-          <br></br>
-          <br></br>
-          {this.props.desc}
-        </h3>
-        <p>
-          <input type="button" value="담기"></input>
-        </p>
+        <Link to="./pay">
+        <button onClick={window.location.replace("/")}>결제</button>
+      </Link>
       </article>
     );
   }
