@@ -8,7 +8,7 @@ export default class BevList2 extends Component {
         lists.push(
           <li key={data[index].id}>
             <a 
-              href={"/content/"+data[index].id}
+              href={data[index].id}
               onClick= {
                 function (e) {
                   e.preventDefault();
