@@ -8,7 +8,7 @@ export default class BevList3 extends Component {
         lists.push(
           <li key={data[index].id}>
             <a 
-              href={+data[index].id}
+              href={"/content/"+data[index].id}
               onClick= {
                 function (e) {
                   e.preventDefault();
@@ -21,6 +21,7 @@ export default class BevList3 extends Component {
       });
       return (
         <nav>
+          <hr></hr>
           <ul>
               {lists}
           </ul>
