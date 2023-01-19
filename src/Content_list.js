@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 export default class Content_list extends Component {
   render() {
-    //console.log ("rendering");
     return (
       <article>
         <h3>
