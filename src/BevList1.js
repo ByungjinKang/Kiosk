@@ -24,7 +24,10 @@ export default class BevList1 extends Component {
     return (
       <nav>
         <ul>
-            {lists}
+            {lists[0]}{lists[1]}{lists[2]}
+            <br>
+            </br>
+            {lists[4]}{lists[5]}{lists[6]}
         </ul>
       </nav>
     )
