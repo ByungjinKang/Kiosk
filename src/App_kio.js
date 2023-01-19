@@ -6,19 +6,15 @@ import BevList3 from './BevList3'
 import Content from './Content_list'
 import { Route, Routes, Link } from "react-router-dom"
 import Navbox from './Navbox'
-import Create_list from './Create_list'
 import Main from './Main'
 import Pay_kio from './Pay_kio'
 
 export default class App_kio extends Component {
  constructor(props) {
     super(props);
-    this.max_content_id = 3;
     this.state = {
         mode : 'first',
         mode2 : 'off',
-        put : 'off',
-        cart : [],
         selected_content_id: 1,
         content1 : [
             {id :1, title : '프레첼', desc : '3,500원', img: <img src = {require('./image/프레첼.png')}/> },
@@ -82,22 +78,8 @@ export default class App_kio extends Component {
          }
          i = i + 1;
         }
-        if(this.state.put == 'on') {
-          _article = <Create_list onSubmit={function(_title, _desc) {
-            this.max_content_id = this.max_content_id+1;
-            var _contents = this.state.contents.concat(
-              {id:this.max_content_id, title:_title, desc:_desc}
-            );
-            this.setState({
-              contents:_contents
-            });
-            console.log(_title, _desc);
-          }.bind(this)
-        }></Create_list>
-        } console.log("render", this);
+      
     }
-
-    
 
     return (
         <>
@@ -110,6 +92,7 @@ export default class App_kio extends Component {
             });
           }.bind(this)}>
         </Main>} />
+
         <Route path = '/navi' element= {<Navbox>
           </Navbox>} />
 
@@ -123,6 +106,7 @@ export default class App_kio extends Component {
           }.bind(this) }
           data={this.state.content1}>
           </BevList1>]} />
+
               <Route path='/sec' element={[<Navbox />,<BevList2
             onChangePage={function(id) {
             this.setState({
@@ -133,6 +117,7 @@ export default class App_kio extends Component {
           }.bind(this) }
           data={this.state.content2}>
           </BevList2>]} />
+
               <Route path='/thi' element={[<Navbox />,<BevList3
             onChangePage={function(id) {
             this.setState({
@@ -143,6 +128,7 @@ export default class App_kio extends Component {
           }.bind(this)}
           data={this.state.content3}>
           </BevList3>]} />
+
           <Route path='/pay' element= {<Pay_kio title={_title} desc ={_desc}
           onChangePage = {function(){
             this.setState({
@@ -150,13 +136,14 @@ export default class App_kio extends Component {
             });
           }.bind(this)}
           />}/>
+
     </Routes>
-          
         <div className="App">
         {this.state.mode2 == 'on' ?
         <Content>
         </Content> : null
         }
+        
      </div>
     </>       
     )
