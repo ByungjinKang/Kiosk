@@ -6,8 +6,10 @@ export default class Content_list extends Component {
     return (
       <article>
         <Link to="./pay">
-        <button onClick={window.location.replace("/")}>결제</button>
+        <button>결제</button>
       </Link>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <Link to="/fir"><button>뒤로</button></Link>
       </article>
     );
   }
